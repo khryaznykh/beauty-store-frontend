@@ -1,0 +1,31 @@
+.cardContainer{
+    width: 18rem;
+    height: 22rem;
+    border-radius: 2rem;
+    background-color: var(--light-green-color);
+    padding: 1rem;
+    border: solid 0.125rem var(--green-color);
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    margin-inline: auto;
+}
+.review {
+    margin-top: 0.9rem;
+}
+.bottomReview{
+    display: flex;
+    align-items: end;
+    margin-top: auto;
+    
+}
+.thumbsup{
+    margin-left: 0.9rem;
+    margin-bottom: 0;
+}
+.nameStyle{
+    text-transform: capitalize;
+    margin-left: auto;
+}
+.dateStyle{
+    margin-left: auto;
+}

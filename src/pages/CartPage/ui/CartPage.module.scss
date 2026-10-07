@@ -1,0 +1,7 @@
+@use '@/app/styles/media-queries.scss'as *;
+@use '@/app/styles/mixin.scss'as *;
+
+.cartPage {
+    @include section-style;
+    margin-top: 2rem;
+}

@@ -1,0 +1,26 @@
+@use '@/app/styles/media-queries.scss'as *;
+@use '@/app/styles/mixin.scss'as *;
+
+.itemCardShopContainer{
+    margin-top: 3rem;
+    padding: 2rem;
+    @include section-style;
+}
+.textContainer {
+    margin-right: 2rem;
+}
+.imageContainer{
+    margin-left: 2rem;
+}
+.image {
+    width: 30rem;
+}
+.name {
+    text-transform: capitalize;
+}
+.description {
+    text-align: justify;
+}
+.button {
+    font-size: var(--font-size-24);
+}

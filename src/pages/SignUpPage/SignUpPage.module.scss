@@ -1,0 +1,8 @@
+@use '@/app/styles/media-queries.scss'as *;
+@use '@/app/styles/mixin.scss'as *;
+
+.container {
+    @include section-style;
+    background-color: var(--light-green-color);
+}
+

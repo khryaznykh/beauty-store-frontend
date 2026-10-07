@@ -1,0 +1,14 @@
+.linkStyle {
+    color: var(--grey-color);
+}
+.activeLink {
+    color: var(--green-color);
+    zoom: 1.1;
+    & .name {
+        color: var(--green-color);
+    }
+}
+.name {
+    font-weight: bolder;
+    color: var(--grey-color);
+}

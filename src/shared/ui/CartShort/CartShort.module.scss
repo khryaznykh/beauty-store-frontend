@@ -1,0 +1,16 @@
+.iconWrapper {
+    position: relative;
+    color: var(--green-color);
+}
+.iconText {
+    font-weight: bolder;
+}
+.circle {
+    position: absolute;
+    width: 1.15rem;
+    height: 1.15rem;
+    margin-left: 1.3rem;
+    margin-top: -0.2rem;
+    border-radius: 50%;
+    background-color: var(--light-pink-color);
+}

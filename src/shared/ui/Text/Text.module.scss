@@ -1,0 +1,50 @@
+$sizes: (
+  8: var(--font-size-8),
+  12: var(--font-size-12),
+  14: var(--font-size-14),
+  16: var(--font-size-16),
+  18: var(--font-size-18),
+  20: var(--font-size-20),
+  22: var(--font-size-22),
+  24: var(--font-size-24),
+  28: var(--font-size-28),
+  32: var(--font-size-32),
+  40: var(--font-size-40),
+  46: var(--font-size-46),
+  48: var(--font-size-48),
+  110: var(--font-size-110),
+  150: var(--font-size-150)
+);
+
+@each $size, $value in $sizes {
+  .size#{$size} {
+    font-size: #{$value};
+  }
+}
+
+$colors: (
+  "white": var(--white-color),
+  "black": var(--black-color),
+  "grey": var(--grey-color),
+  "green": var(--green-color),
+  "lightpurple": var(--light-purple-color),
+  "purple": var(--purple-color),
+  "red": var(--error-color)
+);
+
+@each $color, $value in $colors {
+  .color#{$color} {
+    color: #{$value};
+  }
+}
+
+
+.roboto400 {
+  font-family: var(--font-family-roboto-400);
+}
+
+.alexbrush {
+  font-family: var(--font-family-alex-brush);
+}
+
+

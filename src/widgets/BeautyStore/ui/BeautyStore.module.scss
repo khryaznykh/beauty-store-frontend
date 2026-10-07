@@ -1,0 +1,16 @@
+@use '@/app/styles/media-queries.scss'as *;
+@use '@/app/styles/mixin.scss'as *;
+
+
+.storeContainer {
+    @include section-style;
+}
+.shopItemContainer{
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.filter {
+    background-color: var(--light-green-color);
+    width: 100%;
+    padding: 1.5rem
+}

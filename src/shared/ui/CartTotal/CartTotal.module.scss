@@ -1,0 +1,26 @@
+@use '@/app/styles/media-queries.scss'as *;
+@use '@/app/styles/mixin.scss'as *;
+
+.cartContainer{
+    width: 100%;
+}
+.line {
+    border-color: var(--new-green-color);
+    background: var(--new-green-color);
+    color: var(--new-green-color);
+    height: 0.15rem;
+    width: 100%;
+}
+.totalPrice {
+    margin-left: auto;
+}
+.price{
+    width: 100%;
+}
+.total{
+    font-weight: 900;
+}
+.final{
+    margin-left: auto;
+    font-weight: 900;
+}

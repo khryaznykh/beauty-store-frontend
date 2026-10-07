@@ -1,0 +1,108 @@
+@use '@/app/styles/media-queries.scss' as *;
+@use '@/app/styles/mixin.scss' as *;
+
+.untitled {
+    position: absolute;
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+}
+
+// BACKGROUND
+.untitled__slideBg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(
+        "https://images.unsplash.com/photo-1569512756636-2100074a089e?q=80&w=1770&auto=format&fit=crop"
+    );
+    background-size: cover;
+    background-position: center;
+    background-color: var(--new-green-color);
+    background-blend-mode: hard-light;
+    z-index: 0;
+}
+
+
+// CONTENT
+.untitled__slideContent {
+    position: absolute;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-shadow: 0 0 0.5em rgba(179, 64, 26, 0.25);
+}
+
+// SHUTTERS
+.untitled__shutters {
+    position: absolute;
+    height: 150vmax;
+    width: 150vmax;
+    left: calc(50% - 75vmax);
+    top: calc(50% - 75vmax);
+    pointer-events: none;
+    z-index: 10;
+
+    animation: rotateFrame 2.5s ease-in-out forwards;
+}
+
+
+// CREATE BOTH SHUTTERS
+.untitled__shutters::before,
+.untitled__shutters::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+    background-color: var(--light-again-green-color);
+}
+
+
+// TOP SHUTTER
+.untitled__shutters::before {
+    bottom: 50%;
+    animation: openTop 2.5s ease-in-out forwards;
+}
+
+// BOTTOM SHUTTER
+.untitled__shutters::after {
+    top: 50%;
+    animation: openBottom 2.5s ease-in-out forwards;
+}
+
+// OPEN TOP
+@keyframes openTop {
+    from {
+        transform: translate3d(-50%, 0, 0);
+    }
+    to {
+        transform: translate3d(-50%, -65vmax, 0);
+    }
+}
+
+
+// OPEN BOTTOM
+@keyframes openBottom {
+    from {
+        transform: translate3d(-50%, 0, 0);
+    }
+    to {
+        transform: translate3d(-50%, 65vmax, 0);
+    }
+}
+
+//ROTATE
+@keyframes rotateFrame {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(180deg);
+    }
+}

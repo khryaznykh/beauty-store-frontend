@@ -1,0 +1,30 @@
+.cartContainer {
+    width: 45rem;
+    background-color: var(--white-color);
+    padding: 2rem;
+}
+.cartEmpty {
+    width: 70%;
+    padding: 5rem;
+    background-color: var(--white-color);
+}
+.cartTotalContainer {
+    width: 25rem;
+    background-color: var(--white-color);
+    padding: 2rem;
+}
+.cart {
+    width: 100%;
+}
+
+.sadFace {
+    color: var(--green-color);
+}
+
+.line {
+    border-color: var(--new-green-color);
+    background: var(--new-green-color);
+    color: var(--new-green-color);
+    height: 0.15rem;
+    width: 100%;
+}

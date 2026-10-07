@@ -1,0 +1,67 @@
+@use './fonts';
+
+:root {
+    //colors
+    --white-color: #ffffff;
+    --pastel-pink-color: #F3D9E2;
+    --nude-color: #d9bac2;
+    --brown-red-color: #e29d9f;
+    --dark-brown: #b8646b;
+
+    --green-color: #043C00;
+    --new-green-color: #006E37;
+    --light-green-color: #DDEFC9;
+    --light-again-green-color: #E7F4D9;
+    --sky-blue-color: #BFE3FA;
+    --sky-blue-again-color: #DDE7E7;
+    --background-color: #FDFAF0;
+    --pink-color: #FE6181;
+    --light-pink-color: #FF8E81;
+    --orange-color: #E57641;
+    --light-yellow-color: #FFF7C8;
+
+    --black-color: #242424;
+    --grey-color: #6B6A74;
+    
+    --error-color: #ef0606;
+
+    //font-family
+    --font-family-roboto-400: "roboto-400", sans-serif;
+    --font-family-alex-brush: "alex-brush", sans-serif;
+
+    //font size
+    --font-size-8: 0.55rem;
+    --font-size-12: 0.75rem;
+    --font-size-14: 0.875rem;
+    --font-size-15: 0.9375rem;
+    --font-size-16: 1rem;
+    --font-size-18: 1.125rem;
+    --font-size-20: 1.25rem;
+    --font-size-22: 1.375rem;
+    --font-size-24: 1.5rem;
+    --font-size-26: 1.625rem;
+    --font-size-28: 1.75rem;
+    --font-size-32: 2rem;
+    --font-size-40: 2.5rem;//using main page 2nd line
+    --font-size-46: 2.875rem;
+    --font-size-48: 3rem;
+    --font-size-110: 6.875rem;
+    --font-size-150: 9.375rem;//using main page header
+    
+
+    //gap
+    --gap-4: 0.25rem;
+    --gap-8: 0.5rem;
+    --gap-12: 0.75rem;
+    --gap-16: 1rem;
+    --gap-24: 1.5rem;
+    --gap-32: 2rem;
+    --gap-48: 3rem;
+    --gap-64: 4rem;
+    
+    //border-radius
+    --border-radius-12: 0.75rem;
+    --border-radius-16: 1rem;
+    --border-radius-24: 1.5rem;
+}
+

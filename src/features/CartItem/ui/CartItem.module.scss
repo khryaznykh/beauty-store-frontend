@@ -1,0 +1,22 @@
+@use '@/app/styles/media-queries.scss'as *;
+@use '@/app/styles/mixin.scss'as *;
+
+.cartItem {
+    width: 100%;
+}
+.textContainer {
+    margin-left: 2.5rem;
+}
+.price {
+    font-weight: 900;
+}
+.description {
+    width: 90%;
+}
+.line {
+    border-color: var(--new-green-color);
+    background: var(--new-green-color);
+    color: var(--new-green-color);
+    height: 0.15rem;
+    width: 100%;
+}

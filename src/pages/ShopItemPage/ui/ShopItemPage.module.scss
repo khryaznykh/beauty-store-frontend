@@ -1,0 +1,7 @@
+@use '@/app/styles/media-queries.scss'as *;
+@use '@/app/styles/mixin.scss'as *;
+
+.shopPage {
+    @include section-style;
+    background-color: var(--nude-color);
+}

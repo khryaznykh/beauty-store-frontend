@@ -1,0 +1,12 @@
+@use '@/app/styles/media-queries.scss'as *;
+@use '@/app/styles/mixin.scss'as *;
+
+.headerContainer {
+    width:100%;
+    background-color: var(--background-color);
+    padding: 2rem
+}
+
+.logo {
+    margin-right: auto;
+}

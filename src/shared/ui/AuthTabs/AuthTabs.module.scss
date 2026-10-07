@@ -1,0 +1,11 @@
+@use '@/app/styles/media-queries.scss' as *;
+@use '@/app/styles/mixin.scss' as *;
+
+
+.container{
+    width: 30rem;
+    margin-top: 2rem;
+}
+.tab{
+    font-size: var(--font-size-20);
+}

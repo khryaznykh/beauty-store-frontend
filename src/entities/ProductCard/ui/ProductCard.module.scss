@@ -1,0 +1,30 @@
+.itemContainer {
+  background-color: var(--light-green-color);
+  padding: 1rem;
+  border: solid 2px var(--green-color);
+  border-radius: 2rem;
+  width: 21.875rem;
+  height: 24rem;
+  margin-top: 1rem;
+  position: relative;
+}
+.name {
+  letter-spacing: 0.1rem;
+  font-weight: 800;
+}
+.button {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(50%);
+}
+.price {
+  display: flex;
+  font-weight: 900 ;
+  justify-content: center;
+  align-items: start;
+}
+.sign {
+  font-size: var(--font-size-16);
+  margin-top: 0.2rem;
+  
+}

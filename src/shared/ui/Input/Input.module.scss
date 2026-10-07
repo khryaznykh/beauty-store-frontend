@@ -1,0 +1,43 @@
+.input {
+    border-radius: 1rem;
+    border: 2px solid var(--new-green-color);
+    background: var(--background-color);
+    padding: 1rem 1.5rem;
+    font-family: var(--font-family-roboto-400);
+
+    &::-ms-reveal,
+    &::-ms-clear {
+        display: none;
+    }
+
+    &::placeholder {
+        font-size: var(--font-size-18);
+        color:var(--green-color);
+        opacity: 0.6;
+    }
+}
+
+.label {
+    color: var(--green-color);
+    font-family: var(--font-family-roboto-400);
+    font-size: var(--font-size-20);
+}
+
+.fullWidth {
+    width: 100%;
+}
+
+.inputWrapper {
+    position: relative;
+    width: 100%;
+}
+.rightIcon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,22 @@
+.container {
+    margin-top: 5rem;
+    width: 100%;
+    background-color: var(--light-green-color);
+    padding: 2rem;
+}
+
+.box {
+    
+    padding: 0 3rem;
+}
+
+.links {
+    font-size: var(--font-size-14);
+    text-decoration: none;
+    font-family: var(--font-family-roboto-400);
+    color: var(--black-color);
+}
+
+.header {
+    font-weight: 600;
+}
