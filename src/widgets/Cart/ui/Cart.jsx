@@ -17,7 +17,7 @@ const Cart = () => {
         {totalItems === 0 
             ? 
             <Stack gap={24} direction="column" align="center" className={styles.cartEmpty}>
-                <Text size={48} color="green" >Your Cart is Empty for Now!</Text>
+                <Text size={48} color="green" >Your Cart is Empty</Text>
                 <FaceSlightlyFrowning className={styles.sadFace} strokeWidth={0.75} size={200} />
             </Stack>
             :

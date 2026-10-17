@@ -1,0 +1,49 @@
+.accountWrapper{
+    position: relative;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 210px;
+    padding: 12px;
+    background-color: var(--background-color);
+    border: 0.125rem solid var(--green-color);
+    border-radius: 0.5rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    z-index: 100;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: opacity 0.2s ease, transform 0.2s ease,
+    visibility 0.2s ease;
+}
+.accountWrapper:hover .dropdown,
+.accountWrapper:focus-within .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.name {
+    font-weight: bolder;
+    color: var(--grey-color);
+}
+
+.text{
+    font-weight: 800;
+}
+
+.links {
+    font-size: var(--font-size-12);
+}
+
+.links:hover {
+    zoom: 1.1;
+}
+
+.dropdownText {
+    width: inherit;
+}

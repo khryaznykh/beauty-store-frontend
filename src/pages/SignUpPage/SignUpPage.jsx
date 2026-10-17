@@ -9,8 +9,10 @@ export const SignUpPage = () => {
     return(
         <Stack direction="column" align="center" className={styles.container}>
             <Header/>
-            <AuthTabs/>
-            <SignUpForm/>
+            <Stack direction="column" align="center" className={styles.containerAuth}>
+                <AuthTabs/>
+                <SignUpForm/>
+            </Stack>
             <Footer/>
         </Stack>
     )

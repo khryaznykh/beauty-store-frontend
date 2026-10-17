@@ -7,6 +7,9 @@ import { emailRegex, message } from "@/shared/lib/validation/validateInput";
 import { useState } from "react";
 import styles from './SignInForm.module.scss';
 import { Eye, EyeOff } from 'lucide-react';
+import { useAuth } from "../../../../shared/context/AuthContext";
+import { useLogInMutation } from "../../api/UserApi";
+import { useNavigate } from "react-router";
 
 export const SignInForm = () => {
   const {
@@ -22,15 +25,24 @@ export const SignInForm = () => {
   }})
 
   const [showPassword, setShowPassword] = useState(false)
+  const [ errorMessage, setErrorMessage ] = useState()
+  const { login } = useAuth();
+  const [ signin ] = useLogInMutation();
+  const navigate = useNavigate();
 
   const onSubmit = async (data) => {
     setErrorMessage('')
     try {
-      console.log(data)
       const response = await signin(data).unwrap();
-      login(response.token); // сохраняем токен
+      console.log("backend response", response)
+      const success = login(response.token)
+      console.log("Login successful:", success)
+      if (!success) {
+        setErrorMessage("Invalid authentication token");
+        return
+      }
       reset()
-      navigate('/')
+      navigate('/products')
     } catch (error) {
         if (error?.status === 500) {
           setErrorMessage("Server is not available. Try again later.");
@@ -80,7 +92,7 @@ export const SignInForm = () => {
             }
           /> 
         </Stack>
-        <Button type="onSubmit" fullWidth className={styles.button}>Sign In</Button>
+        <Button type="submit" fullWidth className={styles.button}>Sign In</Button>
       </form>
     </Stack>
   )

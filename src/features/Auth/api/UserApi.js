@@ -19,7 +19,7 @@ export const userApi = api.injectEndpoints({
         logIn: builder.mutation({
             query: (credentials) => createApiConfig({
                 method: 'POST',
-                url: endpoints.path.login,  
+                url: endpoints.path.signin,  
                 body: credentials,
             }),
         }),

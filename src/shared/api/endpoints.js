@@ -2,7 +2,7 @@ export const endpoints = {
     path: {
     //AUTH
         signup: '/signup',
-        login: '/login',
+        signin: '/signin',
         profile: '/profile',
         deleteprofile: '/delete-profile',
         

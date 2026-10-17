@@ -61,6 +61,7 @@ const Review = () => {
         } catch (error) {
             console.error("Failed to create review:", error);
             //if not logged in offer to log in
+            
         }
     }
 

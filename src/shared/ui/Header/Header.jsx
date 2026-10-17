@@ -20,7 +20,7 @@ export const Header =()=> {
             gap={48}
             className={styles.headerContainer}>
                 <Text fontStyle='alexbrush' color='green' size={48} className={styles.logo}>Cosmetiques de Luxe</Text>
-                {currentLocation.pathname === "/shop" ? <SearchItems/> : ""}
+                {currentLocation.pathname === "/products" ? <SearchItems/> : ""}
                 <NavBar/>
                 <Link to={getRouteCart()}>
                     <CartShort/>

@@ -1,4 +1,4 @@
-import { useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import { Stack } from "@/shared/ui/Stack/Stack";
 import styles from './ProductDetailCard.module.scss'
 import { Button } from "@/shared/ui/Button/Button";
@@ -10,17 +10,33 @@ import { useDispatch } from "react-redux";
 import { addItemsToCart } from "@/features/CartItem/model/cartSlice";
 import { useGetProductByIdQuery } from "../../ProductCard/api/ProductApi";
 import StarsReviewAverage from "@/shared/ui/StarsReviewAverage/StarsReviewAverage";
+import { useAuth } from "@/shared/context/AuthContext";
+import { getRouteSignIn } from "../../../app/router/config/routes";
 
 const ProductDetailCard = () => {
 
     const { productId } = useParams();
     const dispatch = useDispatch();
-    const [amount, setAmount] = useState (1)
+    const [amount, setAmount] = useState (1);
+    const { isAuthenticated } = useAuth();
+    const navigate = useNavigate();
     const{
         data,
         isLoading,
         error
     } = useGetProductByIdQuery({productId});
+
+    const handleWriteReview =()=>{
+        if (!isAuthenticated) {
+            navigate(getRouteSignIn(), {
+                state: {
+                    from: getRouteLeaveReview()
+                }
+            });
+            return;
+        } 
+        navigate(getRouteLeaveReview(productId));
+    }
 
     const product = data?.data;
     if (isLoading) {
@@ -49,9 +65,12 @@ const ProductDetailCard = () => {
                 <Button className={styles.button} onClick={() => {dispatch(addItemsToCart({shopItem: product, amount: amount}))}}>
                     Add to cart
                 </Button>
-                <Button tag="link" theme="light" to={getRouteLeaveReview(product._id)} >
+                <Button theme="light" onClick={handleWriteReview} >
                     Leave a review
                 </Button>
+                {/* <Button tag="link" theme="light" to={getRouteLeaveReview(product._id)} >
+                    Leave a review
+                </Button> */}
             </Stack>
         </Stack>
     )
