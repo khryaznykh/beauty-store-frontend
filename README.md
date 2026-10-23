@@ -5,6 +5,15 @@ A full-stack e-commerce application built using the MERN stack (MongoDB, Express
 The project includes product browsing, shopping cart functionality, user authentication, customer reviews, and account management features.
 
 The application is designed with reusable React components, responsive layouts, and REST API integration.
+## Live Demo
+
+- **Live Application:** [Beauty Store](https://kate-beauty-store.netlify.app/)
+- **Frontend Repository:** [GitHub](https://github.com/khryaznykh/beauty-store-frontend)
+- **Backend Repository:** [GitHub](https://github.com/khryaznykh/beauty-store-backend)
+
+The application is deployed using Netlify for the frontend, Render for the backend API, and MongoDB Atlas for database hosting.
+
+**Note:** The backend is hosted on Render's free tier, so the first API request may take additional time if the service has been inactive.
 
 ## Tech Stack
 
@@ -61,37 +70,85 @@ Authentication is implemented using **JWT-based authentication**, React Context 
 
 **Security note:** The current implementation stores the JWT in a JavaScript-accessible cookie. A future improvement is migrating to backend-managed HttpOnly cookies.
 
+## Frontend Architecture & State Management
+
+The frontend uses a modular, feature-oriented architecture to separate application configuration, business features, reusable components, and page-level functionality.
+
+### State Management
+
+- **Redux Toolkit & RTK Query** — Manage API communication, asynchronous requests, server-state caching, and data invalidation.
+- **React Context API** — Manages global authentication state through a custom `AuthProvider` and `useAuth()` hook.
+- **React Hook Form** — Handles form state, input validation, and submission.
+- **React local state** — Manages component-specific interactions and UI behavior.
+
+### Component Architecture
+
+The application uses reusable UI components such as buttons, inputs, layout containers, navigation elements, and product-related components.
+
+SCSS Modules provide component-scoped styling, helping keep styles organized and reducing unintended CSS conflicts.
+
+### Routing
+
+React Router manages navigation between application pages. The UI adapts based on authentication status, displaying different account navigation options for guests and signed-in users.
+
+## Screenshots
+
+### Homepage
+![Beauty Store Homepage](./screenshots/main.png)
+![Beauty Store Shopping Page](./screenshots/products.png)
+
+### Product Details
+![Product Details Page](./screenshots/product-details.png)
+
+### Authentication
+![Sign In Page](./screenshots/sign-in.png)
+![Sign Up Page](./screenshots/sign-up.png)
+
+### Account Dropdown
+![Account Dropdown](./screenshots/dropped-down-logged-in.png)
+![Account Dropdown](./screenshots/drop-down-logged-out.png)
+
 ## Features
 
 ### Implemented
-- Product listing and individual product detail pages
-- Shopping cart functionality
-- User registration and sign-in
-- JWT authentication and logout
-- React Context-based authentication state
+
+**Product Browsing**
+- Product catalog and individual product detail pages
+- Reusable product-related UI components
+- Backend API integration for product data
+
+**Shopping Cart**
+- Shopping cart interface and functionality
+- Cart navigation and cart status display
+
+**Authentication**
+- User registration and sign-in forms
+- JWT-based authentication integration
+- Authentication state managed through React Context
+- Automatic logout based on token expiration
+- Conditional account navigation for authenticated and unauthenticated users
 - Account dropdown menu
-- Product review interface
-- REST API integration using RTK Query
-- Form validation using React Hook Form
-- Reusable UI components
-- Client-side routing
+
+**Forms & Validation**
+- Form management using React Hook Form
+- Client-side input validation
+- API error handling and user feedback
+
+**Application Architecture**
+- Client-side routing using React Router
+- Server-state management and caching with RTK Query
+- Reusable components and SCSS Modules
+- Modular, feature-oriented project organization
 
 ### In Progress / Requires Further Testing
-- Displaying authenticated user profile information consistently
-- Customer review submission and moderation workflow
-- Editing and deleting personal reviews
-- Admin review management
-- Role-based access control across admin functionality
-- Clearing user-specific cached data after logout
-- Mobile-friendly account dropdown interaction
 
-### Planned Improvements
-- Improved authentication security using HttpOnly cookies
-- More complete error handling and user feedback
-- Additional automated tests
-- Accessibility improvements
-- Further responsive design refinements
-
+- Customer review submission, editing, and deletion
+- Complete user profile interface
+- Mobile-friendly account dropdown behavior
+- Improved authentication error handling
+- Clearing authenticated user data from RTK Query cache on logout
+- Additional responsive design and accessibility improvements
+  
 ## Project Structure
 
 The frontend follows a modular, feature-oriented structure.
@@ -140,28 +197,24 @@ npm run dev
 
 The frontend will connect to the configured backend API.
 
-## Repositories
-
-**Frontend:** https://github.com/khryaznykh/beauty-store-frontend
-
-**Backend:** https://github.com/khryaznykh/beauty-store-backend
-
-## Current Project Status
-
 ## Planned Features / Roadmap
 
-The Beauty Store application is actively being developed. Upcoming improvements include:
+Beauty Store is actively being developed. Planned improvements include:
 
-- **Admin Dashboard** — Dedicated admin pages for managing products, users, customer reviews, and store operations.
-- **Stripe Payment Integration** — Secure checkout and online payment processing using Stripe.
-- **Enhanced User Profiles** — Additional account management features, including editing personal information, viewing order history, and managing account settings.
-- **Order Management** — Order tracking, purchase history, and order status updates.
-- **Authentication Improvements** — Enhanced session management and more secure token storage.
-- **UI/UX Improvements** — Additional responsive design improvements, accessibility enhancements, and mobile-friendly navigation.
+- **Admin Dashboard** — Frontend interfaces for managing products, users, customer reviews, and orders.
+- **Stripe Checkout Integration** — Secure checkout UI integrated with backend payment processing.
+- **Enhanced User Profiles** — Profile editing, account settings, and purchase history.
+- **Order Management** — Order history, tracking, and status information.
+- **Authentication Improvements** — More secure session handling and token storage.
+- **Testing** — Unit and integration tests for components and application functionality.
+- **UI/UX Improvements** — Accessibility, responsive design, and mobile navigation enhancements.
 
-### Project Status
+## Project Status
 
-🚧 **Active Development**
+**Active Development**
 
-Core e-commerce functionality and JWT-based authentication have been implemented. Admin management, Stripe checkout, and expanded user account features are planned for future development.
-The application is an ongoing portfolio project demonstrating full-stack JavaScript development, API integration, authentication, reusable React components, and state management.
+The application currently includes product browsing, shopping cart functionality, authentication, and reusable frontend components.
+
+Administrative interfaces, Stripe checkout, and expanded account management features are planned for future development.
+
+This project demonstrates practical experience with React, JavaScript, frontend architecture, REST API integration, authentication, form handling, and state management.
