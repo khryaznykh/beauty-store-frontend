@@ -53,7 +53,7 @@ Authentication is implemented using **JWT-based authentication**, React Context 
 2. The backend verifies their credentials and returns a JWT access token.
 3. The frontend stores the token in a cookie using `js-cookie`.
 4. React Context manages the authentication state through a custom `AuthProvider` and `useAuth()` hook.
-5. The `jwt-decode` library checks the token's expiration time on the frontend.
+5. The `jwt-decode` library decodes the JWT payload to check the token's expiration time on the frontend. **Decoding a JWT does not verify its signature or guarantee its authenticity.** Token verification and authorization are handled securely by the backend using `jwt.verify()` middleware.
 6. RTK Query automatically attaches the JWT to authenticated API requests using the `Authorization: Bearer <token>` header.
 7. Express authentication middleware verifies the JWT signature and expiration before allowing access to protected endpoints.
 8. Users are logged out when the token expires or the backend rejects an authenticated session.
