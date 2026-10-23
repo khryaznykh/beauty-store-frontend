@@ -95,6 +95,8 @@ React Router manages navigation between application pages. The UI adapts based o
 
 ### Homepage
 ![Beauty Store Homepage](./screenshots/main.png)
+
+### Shopping Page
 ![Beauty Store Shopping Page](./screenshots/products.png)
 
 ### Product Details
